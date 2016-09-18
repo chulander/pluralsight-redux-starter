@@ -1,5 +1,7 @@
+/* eslint-disable */
 import webpack from 'webpack';
 import path from 'path';
+/* eslint-enable */
 
 export default {
   debug: true,

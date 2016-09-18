@@ -17,12 +17,14 @@
  2. Tests will not display detailed error messages
  when running against production version code
  */
+/* eslint-disable */
 process.env.NODE_ENV = 'test';
 
 // Register babel so that it will transpile ES6 to ES5
 // before our tests run.
-require('babel-register')();
 
+require('babel-register')();
+/* eslint-enable */
 // Disable webpack-specific features for tests since
 // Mocha doesn't know what to do with them.
 require.extensions['.css'] = function () {return null;};
