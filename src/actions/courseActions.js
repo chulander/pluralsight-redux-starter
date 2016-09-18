@@ -1,7 +1,8 @@
 /* eslint-disable */
+import * as types from './actionTypes';
 export function createCourse(course){
   /* eslint-enable */
   "use strict";
-  return { type: 'CREATE_COURSE', course};
+  return { type: types.CREATE_COURSE, course};
 }
 

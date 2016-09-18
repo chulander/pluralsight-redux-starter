@@ -1,9 +1,10 @@
 /* eslint-disable*/
+import * as types from '../actions/actionTypes';
 export default function courseReducer(state = [], action) {
   /* eslint-enable*/
   "use strict";
   switch (action.type) {
-    case 'CREATE_COURSE':
+    case types.CREATE_COURSE:
       return [...state,
         Object.assign({}, action.course)
       ];

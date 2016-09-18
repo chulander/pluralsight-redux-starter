@@ -2,6 +2,7 @@
 
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 /* eslint-enable */
 
 import * as courseActions from '../../actions/courseActions';
@@ -26,7 +27,7 @@ class CoursesPage extends Component {
   }
 
   onClickSave() {
-    this.props.dispatch(courseActions.createCourse(this.state.course));
+    this.props.actions.createCourse(this.state.course);
   }
 
   courseRow(course, index) {
@@ -52,8 +53,8 @@ class CoursesPage extends Component {
   }
 }
 CoursesPage.propTypes= {
-  dispatch: PropTypes.func.isRequired,
-  courses: PropTypes.array.isRequired
+  courses: PropTypes.array.isRequired,
+  actions: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state, ownProps) {
@@ -64,5 +65,9 @@ function mapStateToProps(state, ownProps) {
     courses: state.courses
   };
 }
-
-export default connect(mapStateToProps)(CoursesPage);
+function mapDispatchToProps(dispatch){
+  return {
+    actions: bindActionCreators(courseActions, dispatch)
+  };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
