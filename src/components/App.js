@@ -2,7 +2,6 @@
 // this component handles the App template used on every page
 import React, {Component, PropTypes} from 'react';
 import Header from './common/Header';
-/* eslint-enable */
 
 class App extends Component {
   render() {

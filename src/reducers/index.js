@@ -2,7 +2,6 @@
 
 import {combineReducers} from 'redux';
 
-/* eslint-enable*/
 
 import courses from './courseReducer';
 

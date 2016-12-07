@@ -1,10 +1,8 @@
 /* eslint-disable */
-import React, {PropTypes} from 'react';
-import {Link} from 'react-router';
+import React, {PropTypes} from 'react'
+import {Link} from 'react-router'
 
-/* eslint-enable */
 const CourseListRow = ({course})=>{
-  "use strict";
   return (
     <tr>
       <td><a href={course.watchHref} target="_blank">Watch</a></td>
@@ -17,6 +15,6 @@ const CourseListRow = ({course})=>{
 };
 
 CourseListRow.propTypes = {
-  course: PropTypes.object.isRequired
+  course: PropTypes.object.isRequired,
 };
 export default CourseListRow;

@@ -3,7 +3,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 
-/* eslint-enable */
 
 class AboutPage extends Component {
   render() {

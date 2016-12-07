@@ -4,7 +4,6 @@ import CourseListRow from './CourseListRow';
 
 /* eslint-enable */
 const CourseList = ({courses})=> {
-  "use strict";
   return (
     <table className="table">
       <thead>
