@@ -29,8 +29,14 @@ node_modules
 #dist folder
 dist
 
+#npm
+npm-debug*
+
 #Webstorm metadata
 .idea
 
 # Mac files
 .DS_Store
+
+# VS Code
+.vscode/
