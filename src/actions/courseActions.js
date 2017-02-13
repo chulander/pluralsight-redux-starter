@@ -1,4 +1,4 @@
-import * types from './actionTypes';
+import * as types from './actionTypes';
 
 export function createCourse(course) {
   return {
